@@ -2,7 +2,6 @@
 ## Makefile for Spanish--lvs
 ###############################################################################
 
-VERSION=0.1.0
 LANG1=spa
 LANG2=lvs
 PREFIX1=$(LANG1)-$(LANG2)
@@ -218,4 +217,3 @@ test: all
 	@echo "house" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
-

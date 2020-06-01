@@ -10,7 +10,6 @@ m4_define([required_apertium_version], [3.4.0])
 PKG_CHECK_MODULES(APERTIUM, apertium >= required_apertium_version, [], [PKG_CHECK_MODULES(APERTIUM, apertium-3.2 >= required_apertium_version)])
 
 
-
 AC_PATH_PROG([CGCOMP], [cg-comp], [false], [$PATH$PATH_SEPARATOR$with_cg_comp/bin])
 AS_IF([test x$CGCOMP = xfalse], [AC_MSG_ERROR([You don't have cg-comp installed])])
 
@@ -24,11 +23,6 @@ AC_PATH_PROG([LRXPROC], [lrx-proc], [false], [$PATH$PATH_SEPARATOR$with_lrx_proc
 AS_IF([test x$LRXPROC = xfalse], [AC_MSG_ERROR([You don't have lrx-proc installed])])
 
 
-
-
-
-
-
 AC_PATH_PROGS(ZCAT, [gzcat zcat], [false])
 AS_IF([test x$ZCAT = xfalse], [AC_MSG_ERROR([You don't have zcat nor gzcat installed])])
 
@@ -40,4 +34,3 @@ AP_CHECK_LING([2], [apertium-lvs])
 AP_MKINCLUDE
 
 AC_OUTPUT([Makefile])
-
